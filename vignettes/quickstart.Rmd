@@ -1,0 +1,110 @@
+---
+title: "Quickstart guide"
+author: "Tan Yong kee"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+    %\VignetteIndexEntry{Introduction to oneSENSE GUI}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}
+---
+# Installing and Loading the Package
+
+****************************************************************
+To install oneSENSE package, start R and run the following code:
+
+
+```{r, eval = FALSE}
+source("https://bioconductor.org/biocLite.R")
+biocLite("oneSENSE")
+```
+
+Load the package with the following code
+
+```{r, message = FALSE}
+library(oneSENSE)
+```
+
+
+Read the package description to find out more about oneSENSE GUI
+```{r, eval = TRUE}
+? "onesense_GUI()"
+```
+
+# Using the oneSENSE package
+
+**********************************************
+
+## Rational of One-SENSE
+
+One-SENSE measures cellular parameters assinged to manually predefined    
+catergories, and a one-dimensional map is constructed for each catergory   
+using t-SNE. Each dimension is informative and can be annotated through    
+the use of heatplots aligned in parallel to each axis, allowing for    
+simultaneous visualization of two catergories across a two-dimensional plot.   
+The cellular occupancy of the resulting plots alllows for direct assessment   
+of the relationships between the categories.   
+
+Read more about One-SENSE: [here](https://www.ncbi.nlm.nih.gov/pubmed/26667171)
+
+## Run oneSENSE using the GUI
+
+The easiest way to access oneSENSE is via the Graphics User Interface(GUI)   
+provided in the package. After loading the package, simply set the directory   
+as instructed in the note above and run the following code:   
+
+
+```{r, eval = FALSE}
+onesense_GUI()
+```
+
+
+The interface will appear like below, you can click the information button    
+**!** to check the explanation for each entry and customize your own analysis.
+
+**1. Choose the directory where the FCS files are located.**
+
+![Selecting FCS directory](step1SelectFolder.png)
+
+**2. Display the markers you want to select**
+
+
+![Display Markers](step2DisplayMarkers.png)
+
+**3. Select the first, second and/or third(optional) category of markers    
+you want to group together**
+![Select Markers by Catergory](step3ConfirmMarkers.png)
+
+**4. Input the number you want to subsample from each FCS file under ceil.**
+
+![Ceiling and Bins](step4CeilBinsSubmit.png)
+
+
+**5. Input the number of bins you want for the cells to be sorted into**
+
+**6. Press submit and it will run to produce median heatplots**
+
+**7. If you wish to do a frequency heatmap, press select coordinates,   
+and after selecting coordinates, press generate CSV.**
+
+![Coordinate Selection](step5CoordinateSelection.png)
+
+**8. Press submit frequency heatplot to generate a different set of heatplot**
+![Frequency Heatplot Submission](step6FrequencyHeatmap.png)
+
+Depending on the size of your data, it will take some time to run   
+the analysis. Once done, the oneSENSE visualisations will be displayed.   
+
+### Median Heatplot example
+![Median Heatplot](groupone.png)
+
+### Frequency Heatplot example
+![Frequency Heatplot](grouptwo.png)
+
+
+# Session Information
+
+```{r}
+sessionInfo()
+```
+
