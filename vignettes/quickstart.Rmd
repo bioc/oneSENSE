@@ -15,8 +15,9 @@ To install oneSENSE package, start R and run the following code:
 
 
 ```{r, eval = FALSE}
-source("https://bioconductor.org/biocLite.R")
-biocLite("oneSENSE")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("oneSENSE")
 ```
 
 Load the package with the following code
