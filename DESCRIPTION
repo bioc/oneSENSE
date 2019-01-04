@@ -2,7 +2,7 @@ Package: oneSENSE
 Type: Package
 Title: One-Dimensional Soli-Expression by Nonlinear Stochastic
         Embedding (OneSENSE)
-Version: 1.4.0
+Version: 1.4.1
 Date: 2017-07-10
 Author: Cheng Yang, Evan Newell, Yong Kee Tan
 Maintainer: Yong Kee Tan <yongkee.t@gmail.com>
@@ -27,4 +27,4 @@ LazyData: true
 RoxygenNote: 6.0.1
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
-biocViews: Software, FlowCytometry, GUI, DimensionReduction
+biocViews: ImmunoOncology, Software, FlowCytometry, GUI, DimensionReduction
